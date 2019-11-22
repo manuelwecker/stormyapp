@@ -1,30 +1,21 @@
 import React from "react";
 import GlobalStyles from "./components/GlobalStyles";
+import Header from "./components/Header";
+import InputPosition from "./components/InputPosition";
+import BtnSubmitPosition from "./components/BtnSubmitPosition";
+import Results from "./components/Results";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <header>
-        <h1>Is a storm coming?</h1>
-      </header>
+      <Header headline="Is a storm coming or not?" />
       <aside>
-        <input
-          type="number"
-          class="search__latt"
-          value="51"
-          placeholder="Please enter Latitude"
-        />
-        <input
-          type="number"
-          class="search__long"
-          value="7"
-          placeholder="Please enter Longitude"
-        />
-        <button class="search__submit">Submit your position</button>
+        <InputPosition latt="51" long="7" />
+        <BtnSubmitPosition label="Submit current position" />
       </aside>
       <main>
-        <div class="results">Output from API</div>
+        <Results weatherdata="Output waiting for API"></Results>
       </main>
     </>
   );
