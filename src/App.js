@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
+import GlobalStyles from "./components/GlobalStyles";
+import Header from "./components/Header";
+import InputPosition from "./components/InputPosition";
+import BtnSubmitPosition from "./components/BtnSubmitPosition";
+import Results from "./components/Results";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <>
+      <GlobalStyles />
+      <Header headline="Is a storm coming or not?" />
+      <aside>
+        <InputPosition latt="51" long="7" />
+        <BtnSubmitPosition label="Submit current position" />
+      </aside>
+      <main>
+        <Results weatherdata="Output waiting for API"></Results>
+      </main>
+    </>
   );
 }
 
