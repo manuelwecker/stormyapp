@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import InputPosition from "./components/InputPosition";
 import BtnSubmitPosition from "./components/BtnSubmitPosition";
 import Results from "./components/Results";
+import WeatherList from "./components/WeatherDataList";
+import refreshWeather from "./components/WeatherDataList";
 
 function App() {
   return (
@@ -12,10 +14,15 @@ function App() {
       <Header headline="Is a storm coming or not?" />
       <aside>
         <InputPosition latt="51" long="7" />
-        <BtnSubmitPosition label="Submit current position" />
+        <BtnSubmitPosition
+          label="Submit current position"
+          onClick={() => refreshWeather()}
+        ></BtnSubmitPosition>
+        />
       </aside>
       <main>
-        <Results weatherdata="Output waiting for API"></Results>
+        <Results weatherdata="Output waiting for API" />
+        <WeatherList />
       </main>
     </>
   );
