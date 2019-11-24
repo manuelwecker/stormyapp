@@ -14,11 +14,7 @@ function App() {
       <Header headline="Is a storm coming or not?" />
       <aside>
         <InputPosition latt="51" long="7" />
-        <BtnSubmitPosition
-          label="Submit current position"
-          onClick={() => refreshWeather()}
-        ></BtnSubmitPosition>
-        />
+        <BtnSubmitPosition label="Submit current position"></BtnSubmitPosition>
       </aside>
       <main>
         <Results weatherdata="Output waiting for API" />

@@ -8,12 +8,12 @@ export default function WeatherList() {
 
   console.log(weather);
 
-  async function refreshWeather() {
-    setLoading(true);
-    const gotWeatherData = await getWeather();
-    setLoading(false);
-    setWeather(gotWeatherData);
-  }
+  // async function refreshWeather() {
+  //   setLoading(true);
+  //   const gotWeatherData = await getWeather();
+  //   setLoading(false);
+  //   setWeather(gotWeatherData);
+  // }
 
   // React.useEffect(() => {
   //   refreshWeather();
@@ -24,6 +24,7 @@ export default function WeatherList() {
       {weather.map(weather => (
         <div key={weather.id}>{weather.description}</div>
       ))}
+      {console.log(weather.id)}
     </div>
   );
 }
