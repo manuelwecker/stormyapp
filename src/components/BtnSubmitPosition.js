@@ -12,6 +12,6 @@ const Button = styled.button`
   border-radius: 7px;
 `;
 
-export default function BtnSubmitPosition({ label }) {
-  return <Button class="search__submit">{label}</Button>;
+export default function BtnSubmitPosition({ onClick, label }) {
+  return <Button onClick={onClick}>{label}</Button>;
 }
